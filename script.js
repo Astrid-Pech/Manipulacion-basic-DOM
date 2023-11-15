@@ -1,0 +1,24 @@
+const h1 = document.querySelector('h1');
+const form = document.querySelector('#form');
+const input1 = document.querySelector('#calculo1');
+const input2 = document.querySelector('#calculo2');
+const btn = document.querySelector('#btnCalcular');
+const pResult = document.querySelector('#result');
+
+form.addEventListener('submit',sumarInputValue);
+
+function sumarInputValue(event){       //<----- 1ra. Forma
+    console.log({event});
+    event.preventDefault();
+    const sumaInputs = input1.value + input2.value;
+    pResult.innerText = "Resultado: " + sumaInputs;
+}
+
+//btn.addEventListener('submit',sumarInputValue);   // <----- 2da. Forma
+
+//function sumarInputValue(event){
+    //console.log({event});
+    //event.preventDefault();
+    //const sumaInputs = input1.value + input2.value;
+    //pResult.innerText = "Resultado: " + sumaInputs;
+//} 
